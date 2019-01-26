@@ -26,7 +26,7 @@ public class AsteroidSpawn : MonoBehaviour {
         spawnX = Random.Range(-10, 10);
         spawnY = Random.Range(-1, 1);
         Vector2 SpawnPosition = new Vector2(spawnX, spawnY);
-        Instantiate(Asteroid[Random.RandomRange(0, 6)], SpawnPosition, Quaternion.identity);
+        Instantiate(Asteroid[Random.Range(0, 4)], SpawnPosition, Quaternion.identity);
        
     }
 }

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4595173485710396}
   - component: {fileID: 33794228024367950}
   - component: {fileID: 23278496746028530}
+  - component: {fileID: 114280894457344728}
   m_Layer: 0
   m_Name: solar_pannels
   m_TagString: Untagged
@@ -53,8 +54,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4266217456601386}
+  - component: {fileID: 114107567657215370}
   m_Layer: 0
-  m_Name: Satalite
+  m_Name: SataliteR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,14 +81,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1638932981139874}
-  m_LocalRotation: {x: 3.5063874e-14, y: -0.0000001872535, z: -0.0000001872535, w: 1}
+  m_LocalRotation: {x: 1, y: 0.0000001872535, z: 0.0000001872535, w: 3.5063874e-14}
   m_LocalPosition: {x: 0, y: 0, z: 81.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4595173485710396}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -0.000015258789, z: -0.000015258789}
+  m_LocalEulerAnglesHint: {x: 180, y: -0.000015258789, z: -0.000015258789}
 --- !u!4 &4595173485710396
 Transform:
   m_ObjectHideFlags: 1
@@ -185,3 +187,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1155597356125386}
   m_Mesh: {fileID: 4300002, guid: 0029890bebfe93b48a3091c58e59fe76, type: 3}
+--- !u!114 &114107567657215370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638932981139874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4255e82cc1cacf4b9a5bc6f0988f565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+--- !u!114 &114280894457344728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155597356125386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a31ff1cec7053f4a977acc98b2f1555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 0
+  speed: 0

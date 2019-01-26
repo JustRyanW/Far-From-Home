@@ -173,6 +173,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4930130506037582, guid: acb45a5035a439d4081d3c177805b77f, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acb45a5035a439d4081d3c177805b77f, type: 2}
   m_IsPrefabAsset: 0
@@ -242,27 +246,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1767988391 stripped
+--- !u!1 &729686764 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1827341878240174, guid: acb45a5035a439d4081d3c177805b77f,
+  m_CorrespondingSourceObject: {fileID: 1286116337415282, guid: acb45a5035a439d4081d3c177805b77f,
     type: 2}
   m_PrefabInternal: {fileID: 409880590}
---- !u!114 &1767988395
+--- !u!114 &729686767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1767988391}
+  m_GameObject: {fileID: 729686764}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e32cfacf4aa6f34984ca8d4ad8dfeb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Asteroid:
-  - {fileID: 1094146085251162, guid: b7c88cee55b5f6747a9193478795f61c, type: 2}
-  - {fileID: 100000, guid: 6283953389ecd224fbbdf8f8ecfce372, type: 3}
-  - {fileID: 1768509962388692, guid: d9ea04c7a6ee53149a13876496e03a46, type: 2}
-  - {fileID: 100000, guid: ea6d6e08c7d08f641b3772c3a60a8244, type: 3}
-  - {fileID: 100000, guid: 6283953389ecd224fbbdf8f8ecfce372, type: 3}
-  - {fileID: 1133093593989962, guid: 68aeb6b521ec7a440a908595ad5c75e3, type: 2}
-  InvokeRate: 2
+  - {fileID: 1296594423872086, guid: c363f1eb12db9714e9fbefe5804221a6, type: 2}
+  - {fileID: 1296594423872086, guid: c363f1eb12db9714e9fbefe5804221a6, type: 2}
+  - {fileID: 1296594423872086, guid: c363f1eb12db9714e9fbefe5804221a6, type: 2}
+  - {fileID: 1296594423872086, guid: c363f1eb12db9714e9fbefe5804221a6, type: 2}
+  InvokeRate: 1
