@@ -9,10 +9,9 @@ public class Flight : MonoBehaviour {
     Animator animator;
 
     public float forwardSpeed = 20f;
-    public float horizontalSpeed = 10f;
-
-    public float turnAnimationValue;
-    public float turnAnimationTime;
+    public float horizontalAcceleration = 0.05f;
+    float horizontalSpeed;
+    public float playareaWidth = 7f;
 
 	void Start ()
     {
@@ -27,26 +26,25 @@ public class Flight : MonoBehaviour {
 	}
 
     void Move ()
-    {
-        transform.Translate(new Vector3(0, 0, forwardSpeed * Time.deltaTime));
-
-        if (Input.GetAxisRaw("Horizontal") == 1 && player.position.x < 7.5)
+    {    
+        if (Input.GetAxisRaw("Horizontal") == 1 && player.position.x < playareaWidth)
         {
-            player.Translate(new Vector2(horizontalSpeed * Time.deltaTime, 0));
+            horizontalSpeed = Mathf.Lerp(horizontalSpeed, forwardSpeed, horizontalAcceleration);
             animator.SetBool("Right", true);
             animator.SetBool("Left", false);
         }
-        else if (Input.GetAxisRaw("Horizontal") == -1 && player.position.x > -7.5)
+        else if (Input.GetAxisRaw("Horizontal") == -1 && player.position.x > -playareaWidth)
         {
-            player.Translate(new Vector2(-horizontalSpeed * Time.deltaTime, 0));
+            horizontalSpeed = Mathf.Lerp(horizontalSpeed, -forwardSpeed, horizontalAcceleration);
             animator.SetBool("Left", true);
             animator.SetBool("Right", false);
         } else
         {
+            horizontalSpeed = Mathf.Lerp(horizontalSpeed, 0, horizontalAcceleration);
             animator.SetBool("Right", false);
             animator.SetBool("Left", false);
-
         }
 
+        transform.Translate(new Vector3(horizontalSpeed * Time.deltaTime, 0, forwardSpeed * Time.deltaTime));
     }
 }
