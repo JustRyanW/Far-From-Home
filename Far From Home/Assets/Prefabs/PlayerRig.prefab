@@ -67,6 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4930130506037582}
   - component: {fileID: 114859533775217182}
+  - component: {fileID: 114394055412812806}
   m_Layer: 0
   m_Name: PlayerRig
   m_TagString: Untagged
@@ -690,6 +691,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114394055412812806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286116337415282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e32cfacf4aa6f34984ca8d4ad8dfeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Asteroid:
+  - {fileID: 1094146085251162, guid: b7c88cee55b5f6747a9193478795f61c, type: 2}
+  - {fileID: 1133093593989962, guid: 68aeb6b521ec7a440a908595ad5c75e3, type: 2}
+  - {fileID: 1768509962388692, guid: d9ea04c7a6ee53149a13876496e03a46, type: 2}
+  InvokeRate: 1
 --- !u!114 &114859533775217182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -701,6 +718,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2608e4fa44d4614499ef6c7eea2ec70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 1717276939027246, guid: c4b34bdf2f1092d4fa8090f37a3be06f,
+    type: 2}
   forwardSpeed: 10
-  horizontalAcceleration: 0.05
-  playareaWidth: 7
+  horizontalSpeed: 40
+  horizontalAcceleration: 0.1
+  playareaWidth: 14
+  bulletTime: 10
+  weaponCooldownTime: 0.1
