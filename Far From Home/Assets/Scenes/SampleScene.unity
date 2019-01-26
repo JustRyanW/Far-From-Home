@@ -152,6 +152,33 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
+        type: 2}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1717276939027246, guid: c4b34bdf2f1092d4fa8090f37a3be06f,
+        type: 2}
+    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
+        type: 2}
+      propertyPath: laserPrefab
+      value: 
+      objectReference: {fileID: 1717276939027246, guid: c4b34bdf2f1092d4fa8090f37a3be06f,
+        type: 2}
+    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
+        type: 2}
+      propertyPath: bulletSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
+        type: 2}
+      propertyPath: playareaWidth
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
+        type: 2}
+      propertyPath: horizontalAcceleration
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acb45a5035a439d4081d3c177805b77f, type: 2}
   m_IsPrefabAsset: 0
