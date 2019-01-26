@@ -5,9 +5,8 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
 
-    public float Speed = 10f; //start Speed
+    public float Speed; 
     private Transform ThisTransform = null;
-
 
     void Awake()
     {
@@ -18,7 +17,9 @@ public class Asteroid : MonoBehaviour
 
     void Update()
     {
+        Speed = Random.Range(50, 150);
         //Update object position
-        ThisTransform.position += -ThisTransform.right * Speed * Time.deltaTime;
+        ThisTransform.position += -ThisTransform.forward * Speed * Time.deltaTime;
+        Destroy(gameObject, 20);//destroy the dome after 29s
     }
 }
