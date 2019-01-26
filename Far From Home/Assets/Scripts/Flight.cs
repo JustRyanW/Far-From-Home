@@ -17,18 +17,13 @@ public class Flight : MonoBehaviour {
 	void Start ()
     {
         player = transform.GetChild(0);
-        playerModel = transform.GetChild(0);
+        playerModel = player.GetChild(0);
         animator = playerModel.GetComponent<Animator>();
-	}
+    }
 	
 	void Update ()
     {
         Move();
-
-        float rotationZ = turnAnimationTime * 25;
-        float rotationY = turnAnimationTime * -20;
-
-        //player.rotation.y = Quaternion.e;
 	}
 
     void Move ()
@@ -38,15 +33,19 @@ public class Flight : MonoBehaviour {
         if (Input.GetAxisRaw("Horizontal") == 1 && player.position.x < 7.5)
         {
             player.Translate(new Vector2(horizontalSpeed * Time.deltaTime, 0));
-            turnAnimationValue = Mathf.Lerp(turnAnimationValue, 1, turnAnimationTime);
+            animator.SetBool("Right", true);
+            animator.SetBool("Left", false);
         }
         else if (Input.GetAxisRaw("Horizontal") == -1 && player.position.x > -7.5)
         {
             player.Translate(new Vector2(-horizontalSpeed * Time.deltaTime, 0));
-            turnAnimationValue = Mathf.Lerp(turnAnimationValue, -1, turnAnimationTime);
+            animator.SetBool("Left", true);
+            animator.SetBool("Right", false);
         } else
         {
-            turnAnimationValue = Mathf.Lerp(turnAnimationValue, 0.5f, turnAnimationTime);
+            animator.SetBool("Right", false);
+            animator.SetBool("Left", false);
+
         }
 
     }
