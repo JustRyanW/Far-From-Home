@@ -199,6 +199,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0
+  Health: 2
+  Hit: 0
+  flashTime: 0.5
+  renderer: {fileID: 0}
 --- !u!114 &114280894457344728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,5 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a31ff1cec7053f4a977acc98b2f1555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  degreesPerSecond: 0
-  speed: 0
+  maxDegreesPerSecond: 15
+  Health: 2
+  Hit: 0
+  flashTime: 0
+  renderer: {fileID: 23278496746028530}

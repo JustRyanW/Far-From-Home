@@ -261,9 +261,10 @@ MonoBehaviour:
   spawnAreaWidth: 20
   spawnAreaHeight: 2
   Asteroid:
-  - {fileID: 1094146085251162, guid: b7c88cee55b5f6747a9193478795f61c, type: 2}
-  - {fileID: 1133093593989962, guid: 68aeb6b521ec7a440a908595ad5c75e3, type: 2}
-  - {fileID: 1768509962388692, guid: d9ea04c7a6ee53149a13876496e03a46, type: 2}
+  - {fileID: 1930251961326902, guid: 3d219dd3459798843a44fcec168ac4b8, type: 2}
+  - {fileID: 1296594423872086, guid: c363f1eb12db9714e9fbefe5804221a6, type: 2}
+  - {fileID: 1638932981139874, guid: cb50859b0e66e8a449d3c3feab05a293, type: 2}
+  - {fileID: 1506603454112548, guid: 58e875a772f4d824ba3cd934a475f66b, type: 2}
   InvokeRate: 1
 --- !u!1 &907959161
 GameObject:

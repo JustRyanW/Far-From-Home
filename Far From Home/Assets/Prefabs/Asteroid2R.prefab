@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4955834386370886}
   - component: {fileID: 114218335756594472}
+  - component: {fileID: 65245244466753872}
   m_Layer: 0
   m_Name: Asteroid2R
   m_TagString: Untagged
@@ -114,6 +115,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1489287405399764}
   m_Mesh: {fileID: 4300000, guid: 6283953389ecd224fbbdf8f8ecfce372, type: 3}
+--- !u!65 &65245244466753872
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1930251961326902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.597757, y: 28.469812, z: 6.4171705}
+  m_Center: {x: -0.5105402, y: 0.57973164, z: 0.20793474}
 --- !u!114 &114168751217527524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,8 +138,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a31ff1cec7053f4a977acc98b2f1555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  degreesPerSecond: 0
-  speed: 0
+  maxDegreesPerSecond: 40
+  Health: 2
+  Hit: 0
+  flashTime: 0.1
+  renderer: {fileID: 23886927897922304}
 --- !u!114 &114218335756594472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,3 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0
+  Health: 2
+  Hit: 0
+  flashTime: 0.5
+  renderer: {fileID: 0}

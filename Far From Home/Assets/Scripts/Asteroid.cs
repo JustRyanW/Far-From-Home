@@ -4,21 +4,51 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    public float Speed; 
-    private Transform ThisTransform = null;
+    public float Speed;
 
-    void Awake()
+    public float Health = 2;
+    public bool Hit;
+    public float flashTime;
+    Color origionalColor;
+    public new MeshRenderer renderer;
+
+    private void Start()
     {
-        ThisTransform = GetComponent<Transform>();
+        renderer = GetComponentInChildren<MeshRenderer>();
+        origionalColor = renderer.material.color;
+        Hit = false;
     }
 
-    // Update is called once per frame
-
     void Update()
-    {
+    {     
         Speed = Random.Range(50, 150);
         //Update object position
-        ThisTransform.position += -ThisTransform.forward * Speed * Time.deltaTime;
+        transform.position += -Vector3.forward * Speed * Time.deltaTime;
         Destroy(gameObject, 20);//destroy the dome after 29s
+
+        if (Health == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void FlashRed()
+    {
+        renderer.material.color = Color.red;
+        Invoke("ResetColor", flashTime);
+    }
+    void ResetColor()
+    {
+        renderer.material.color = origionalColor;
+        Hit = false; 
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Laser" && Hit == false)
+        {
+            FlashRed();
+            Hit = true;
+            --Health;
+        }
     }
 }
