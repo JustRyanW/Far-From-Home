@@ -6,7 +6,7 @@ public class AsteroidSpawn : MonoBehaviour {
 
     
     public GameObject[] Asteroid; // enemy object
-    public float InvokeRate = 1; // spawn rate
+    public float InvokeRate = 5; // spawn rate
     private float spawnX;
     private float spawnY;
 
@@ -27,6 +27,6 @@ public class AsteroidSpawn : MonoBehaviour {
         spawnY = Random.Range(-1, 1);
         Vector2 SpawnPosition = new Vector2(spawnX, spawnY);
         Instantiate(Asteroid[Random.Range(0, 4)], SpawnPosition, Quaternion.identity);
-        Instantiate(Asteroid[Random.Range(0, Asteroid.Length)], SpawnPosition, Quaternion.identity);    
+        //Instantiate(Asteroid[Random.Range(0, Asteroid.Length)], SpawnPosition, Quaternion.identity);    
     }
 }
