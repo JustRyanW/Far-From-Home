@@ -67,6 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4930130506037582}
   - component: {fileID: 114859533775217182}
+  - component: {fileID: 114677045924376666}
   m_Layer: 0
   m_Name: PlayerRig
   m_TagString: Untagged
@@ -432,7 +433,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1510363250982318}
   m_LocalRotation: {x: 0.2164396, y: 0, z: 0, w: 0.97629607}
-  m_LocalPosition: {x: 0, y: 7, z: -7}
+  m_LocalPosition: {x: 0, y: 16, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4930130506037582}
@@ -690,6 +691,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114677045924376666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286116337415282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e32cfacf4aa6f34984ca8d4ad8dfeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Asteroid:
+  - {fileID: 1930251961326902, guid: 3d219dd3459798843a44fcec168ac4b8, type: 2}
+  - {fileID: 1296594423872086, guid: c363f1eb12db9714e9fbefe5804221a6, type: 2}
+  - {fileID: 1638932981139874, guid: cb50859b0e66e8a449d3c3feab05a293, type: 2}
+  - {fileID: 1506603454112548, guid: 58e875a772f4d824ba3cd934a475f66b, type: 2}
+  InvokeRate: 1
 --- !u!114 &114859533775217182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -701,6 +719,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2608e4fa44d4614499ef6c7eea2ec70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 10
-  horizontalAcceleration: 0.05
-  playareaWidth: 7
+  forwardSpeed: 1
+  horizontaSpeed: 20
+  horizontalAcceleration: 0.1
+  playareaWidth: 14
+  laserPrefab: {fileID: 1717276939027246, guid: c4b34bdf2f1092d4fa8090f37a3be06f,
+    type: 2}
+  laserSpeed: 40
+  weaponCooldownTime: 0.2
+  startPos: {x: 0, y: 0, z: -1000}
+  endPos: {x: 0, y: 0, z: -100}
