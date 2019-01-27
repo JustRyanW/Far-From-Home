@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948226012014882}
   - component: {fileID: 114619624933592368}
+  - component: {fileID: 135075163753285364}
   m_Layer: 0
   m_Name: AsteroidR
   m_TagString: Untagged
@@ -65,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1296594423872086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9999995, y: 0.13104546, z: 0.0000054836273}
+  m_LocalPosition: {x: 43.918804, y: 59.548153, z: -78.863754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4801538641170442}
@@ -87,7 +88,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: ea6d6e08c7d08f641b3772c3a60a8244, type: 3}
+  - {fileID: 2100000, guid: dc0abc4871f6c6845b9255f30a8e8fee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,3 +140,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0
+--- !u!135 &135075163753285364
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1296594423872086}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.1868405
+  m_Center: {x: -0.02, y: 2.8, z: 0.7}

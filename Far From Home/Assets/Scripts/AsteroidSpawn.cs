@@ -23,10 +23,10 @@ public class AsteroidSpawn : MonoBehaviour {
 
     void Spawn()
     {
-        spawnX = Random.Range(-10, 10);
-        spawnY = Random.Range(-1, 1);
+        spawnX = Random.Range(-14, 14);
+        spawnY = Random.Range(-3, 3);
         Vector2 SpawnPosition = new Vector2(spawnX, spawnY);
         Instantiate(Asteroid[Random.Range(0, 4)], SpawnPosition, Quaternion.identity);
-        Instantiate(Asteroid[Random.Range(0, Asteroid.Length)], SpawnPosition, Quaternion.identity);    
+        //Instantiate(Asteroid[Random.Range(0, Asteroid.Length)], SpawnPosition, Quaternion.identity);    
     }
 }

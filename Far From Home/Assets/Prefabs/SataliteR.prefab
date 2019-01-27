@@ -55,6 +55,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4266217456601386}
   - component: {fileID: 114107567657215370}
+  - component: {fileID: 65575569266852230}
+  - component: {fileID: 65175268280879784}
   m_Layer: 0
   m_Name: SataliteR
   m_TagString: Untagged
@@ -81,14 +83,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1638932981139874}
-  m_LocalRotation: {x: 1, y: 0.0000001872535, z: 0.0000001872535, w: 3.5063874e-14}
-  m_LocalPosition: {x: 0, y: 0, z: 81.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 17.80466, y: 11.545536, z: -16.905798}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4595173485710396}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: -0.000015258789, z: -0.000015258789}
+  m_LocalEulerAnglesHint: {x: 90, y: -0.000015258789, z: -0.000015258789}
 --- !u!4 &4595173485710396
 Transform:
   m_ObjectHideFlags: 1
@@ -118,7 +120,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0029890bebfe93b48a3091c58e59fe76, type: 3}
+  - {fileID: 2100000, guid: bd1ebea5c3ed2ac44b4ca23cc8e3a985, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -153,7 +155,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0029890bebfe93b48a3091c58e59fe76, type: 3}
+  - {fileID: 2100000, guid: bd1ebea5c3ed2ac44b4ca23cc8e3a985, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,6 +189,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1155597356125386}
   m_Mesh: {fileID: 4300002, guid: 0029890bebfe93b48a3091c58e59fe76, type: 3}
+--- !u!65 &65175268280879784
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638932981139874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 62.64755, y: 3.111435, z: 13.311691}
+  m_Center: {x: 0.83254814, y: -15.665718, z: -0.3549838}
+--- !u!65 &65575569266852230
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638932981139874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.8844595, y: 6.1133194, z: 62.842007}
+  m_Center: {x: -0.3164773, y: -13.200001, z: -0.72638893}
 --- !u!114 &114107567657215370
 MonoBehaviour:
   m_ObjectHideFlags: 1
