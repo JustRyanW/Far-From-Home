@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour {
 
-    public float laserSpeed;
+    [HideInInspector]
+    public float laserSpeed = 5;
 
 	void Update () {
         transform.Translate(new Vector3(0, laserSpeed * Time.deltaTime,0));
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        Destroy(gameObject);
+    }
+
 }

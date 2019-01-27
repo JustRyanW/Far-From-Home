@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4494944999701910}
   - component: {fileID: 33165844670135494}
   - component: {fileID: 23443212428431478}
-  - component: {fileID: 114629978694933638}
+  - component: {fileID: 114761095634973586}
   m_Layer: 0
   m_Name: Astroid 1
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1094146085251162}
   m_Mesh: {fileID: 4300000, guid: ea6d6e08c7d08f641b3772c3a60a8244, type: 3}
---- !u!114 &114629978694933638
+--- !u!114 &114761095634973586
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,7 +92,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1094146085251162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4255e82cc1cacf4b9a5bc6f0988f565, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a31ff1cec7053f4a977acc98b2f1555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 70
+  maxDegreesPerSecond: 20
+  Health: 2
+  Hit: 0
+  flashTime: 0
+  renderer: {fileID: 23443212428431478}

@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour {
 
-    public float degreesPerSecond;
-    public float speed;
+    public float maxDegreesPerSecond;
+
+
+    float rotationX;
+    float rotationY;
+
+    void Start()
+    {
+
+
+        rotationX = Random.Range(-maxDegreesPerSecond, maxDegreesPerSecond);
+        rotationY = Random.Range(-maxDegreesPerSecond, maxDegreesPerSecond);
+    }
 
     void Update()
     {
-        degreesPerSecond = Random.Range(-180, 180);
-        speed = Random.Range(5, 15);
+        
+
         // Spin object around Y-Axis
-        transform.Rotate(new Vector2(Time.deltaTime * degreesPerSecond, speed));
+        transform.Rotate(new Vector2(rotationX, rotationY) * Time.deltaTime);
     }
 }
