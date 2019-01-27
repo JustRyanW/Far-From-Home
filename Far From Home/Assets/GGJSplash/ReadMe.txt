@@ -1,0 +1,1 @@
+Just add the GGJSplashScreen scene to the top of your build settings. It'll do the rest!
