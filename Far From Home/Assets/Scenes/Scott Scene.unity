@@ -267,4 +267,4 @@ MonoBehaviour:
   - {fileID: 1296594423872086, guid: c363f1eb12db9714e9fbefe5804221a6, type: 2}
   - {fileID: 1296594423872086, guid: c363f1eb12db9714e9fbefe5804221a6, type: 2}
   - {fileID: 1296594423872086, guid: c363f1eb12db9714e9fbefe5804221a6, type: 2}
-  InvokeRate: 1
+  InvokeRate: 5
