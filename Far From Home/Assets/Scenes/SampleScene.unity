@@ -152,45 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
-        type: 2}
-      propertyPath: laserPrefab
-      value: 
-      objectReference: {fileID: 1717276939027246, guid: c4b34bdf2f1092d4fa8090f37a3be06f,
-        type: 2}
-    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
-        type: 2}
-      propertyPath: laserSpeed
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
-        type: 2}
-      propertyPath: playareaWidth
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
-        type: 2}
-      propertyPath: horizontalAcceleration
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
-        type: 2}
-      propertyPath: forwardSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4723522197602484, guid: acb45a5035a439d4081d3c177805b77f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4723522197602484, guid: acb45a5035a439d4081d3c177805b77f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -16
-      objectReference: {fileID: 0}
-    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
-        type: 2}
-      propertyPath: weaponCooldownTime
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acb45a5035a439d4081d3c177805b77f, type: 2}
   m_IsPrefabAsset: 0
@@ -260,30 +221,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &175839308 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1286116337415282, guid: acb45a5035a439d4081d3c177805b77f,
-    type: 2}
-  m_PrefabInternal: {fileID: 106144219}
---- !u!114 &175839311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 175839308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e32cfacf4aa6f34984ca8d4ad8dfeb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnAreaWidth: 20
-  spawnAreaHeight: 2
-  Asteroid:
-  - {fileID: 1930251961326902, guid: 3d219dd3459798843a44fcec168ac4b8, type: 2}
-  - {fileID: 1296594423872086, guid: c363f1eb12db9714e9fbefe5804221a6, type: 2}
-  - {fileID: 1638932981139874, guid: cb50859b0e66e8a449d3c3feab05a293, type: 2}
-  - {fileID: 1506603454112548, guid: 58e875a772f4d824ba3cd934a475f66b, type: 2}
-  InvokeRate: 1
 --- !u!1 &907959161
 GameObject:
   m_ObjectHideFlags: 0

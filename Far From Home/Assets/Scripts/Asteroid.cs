@@ -26,7 +26,7 @@ public class Asteroid : MonoBehaviour
         transform.position += -Vector3.forward * Speed * Time.deltaTime;
         Destroy(gameObject, 20);//destroy the dome after 29s
 
-        if (Health == 0)
+        if (Health <= 0)
         {
             Destroy(gameObject);
         }
