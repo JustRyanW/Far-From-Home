@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4930130506037582, guid: acb45a5035a439d4081d3c177805b77f, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
         type: 2}
@@ -172,6 +172,24 @@ Prefab:
         type: 2}
       propertyPath: horizontalAcceleration
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
+        type: 2}
+      propertyPath: forwardSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723522197602484, guid: acb45a5035a439d4081d3c177805b77f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723522197602484, guid: acb45a5035a439d4081d3c177805b77f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859533775217182, guid: acb45a5035a439d4081d3c177805b77f,
+        type: 2}
+      propertyPath: weaponCooldownTime
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acb45a5035a439d4081d3c177805b77f, type: 2}
@@ -470,7 +488,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848977076
 GameObject:

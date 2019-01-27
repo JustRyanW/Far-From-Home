@@ -38,6 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4610715971245146}
   - component: {fileID: 114744901093397578}
+  - component: {fileID: 54559788827154430}
+  - component: {fileID: 65939620171048976}
   m_Layer: 0
   m_Name: SatelliteFR
   m_TagString: Untagged
@@ -114,6 +116,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1225787115586912}
   m_Mesh: {fileID: 4300000, guid: a110290439249744085e9b21003dc270, type: 3}
+--- !u!54 &54559788827154430
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506603454112548}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65939620171048976
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506603454112548}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.942963, y: 28.469812, z: 31.243073}
+  m_Center: {x: 0.41655016, y: 0.57973194, z: -0.24719238}
 --- !u!114 &114126559832143358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,10 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDegreesPerSecond: 20
-  Health: 2
-  Hit: 0
-  flashTime: 0
-  renderer: {fileID: 23682527391700844}
 --- !u!114 &114744901093397578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,5 +169,5 @@ MonoBehaviour:
   Speed: 0
   Health: 2
   Hit: 0
-  flashTime: 0.5
+  flashTime: 0.1
   renderer: {fileID: 0}

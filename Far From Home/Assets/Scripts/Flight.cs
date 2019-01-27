@@ -17,6 +17,11 @@ public class Flight : MonoBehaviour {
     public float weaponCooldownTime = 0.1f;
     float weapoonLastFireTime;
 
+    [Header("Level Settings")]
+    public Vector3 startPos = new Vector3 (0,0,-1000);
+    public Vector3 endPos = new Vector3 (0,0,-100);
+    float levelProgressPercent = 0;
+
     Transform player;
     Transform playerModel;
     Animator animator;
@@ -62,6 +67,9 @@ public class Flight : MonoBehaviour {
             animator.SetBool("Left", false);
         }
 
-        transform.Translate(new Vector3(horizontalVelocity * Time.deltaTime, 0, forwardSpeed * Time.deltaTime));
+        player.transform.Translate(new Vector2(horizontalVelocity * Time.deltaTime, 0));
+
+        levelProgressPercent += forwardSpeed * Time.deltaTime;
+        transform.position = Vector3.Lerp(startPos, endPos, levelProgressPercent / 100);
     }
 }
