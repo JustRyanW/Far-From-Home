@@ -39,10 +39,14 @@ public class Flight : MonoBehaviour {
 
         if (Input.GetButton("Fire") && Time.time - weapoonLastFireTime > weaponCooldownTime)
         {
-            GameObject laser = Instantiate(laserPrefab, playerModel.transform.position, transform.rotation);
+            GameObject laser = Instantiate(laserPrefab, playerModel.transform.position + new Vector3(1, 0, 0), transform.rotation);
+            GameObject laser2 = Instantiate(laserPrefab, playerModel.transform.position + new Vector3(-1, 0, 0), transform.rotation);
             laser.GetComponent<Laser>().laserSpeed = laserSpeed;
+            laser2.GetComponent<Laser>().laserSpeed = laserSpeed;
             laser.transform.Rotate(Vector3.right * 90);
-            Destroy(laser, 10f);
+            laser2.transform.Rotate(Vector3.right * 90);
+            Destroy(laser, 30f);
+            Destroy(laser2, 30f);
             weapoonLastFireTime = Time.time;
         }
 	}

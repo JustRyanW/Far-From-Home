@@ -44,10 +44,13 @@ public class Asteroid : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Laser" && Hit == false)
+        if (collision.gameObject.tag == "Laser")
         {
-            FlashRed();
-            Hit = true;
+            if(Hit == false)
+            {
+                FlashRed();
+                Hit = true;
+            }        
             --Health;
         }
     }
