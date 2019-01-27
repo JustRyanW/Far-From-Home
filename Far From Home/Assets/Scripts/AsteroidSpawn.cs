@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class AsteroidSpawn : MonoBehaviour {
 
-    public float spawnAreaWidth = 14f;
-    public float spawnAreaHeight = 2f;
+    
     public GameObject[] Asteroid; // enemy object
     public float InvokeRate = 1; // spawn rate
     private float spawnX;
@@ -24,10 +23,10 @@ public class AsteroidSpawn : MonoBehaviour {
 
     void Spawn()
     {
-        spawnX = Random.Range(-spawnAreaWidth, spawnAreaWidth);
-        spawnY = Random.Range(-spawnAreaHeight, spawnAreaHeight);
+        spawnX = Random.Range(-14, 14);
+        spawnY = Random.Range(-3, 3);
         Vector2 SpawnPosition = new Vector2(spawnX, spawnY);
-        GameObject asteroid = Instantiate(Asteroid[Random.Range(0, Asteroid.Length)], SpawnPosition, Quaternion.identity);
-        asteroid.transform.GetChild(0).rotation = Random.rotation;
+        Instantiate(Asteroid[Random.Range(0, 4)], SpawnPosition, Quaternion.identity);
+        //Instantiate(Asteroid[Random.Range(0, Asteroid.Length)], SpawnPosition, Quaternion.identity);    
     }
 }
