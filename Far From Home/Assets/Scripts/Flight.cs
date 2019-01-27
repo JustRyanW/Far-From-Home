@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class Flight : MonoBehaviour {
 
+    [Header("Ship Settings")]
+    public float forwardSpeed = 20f;
+    public float horizontaSpeed = 20f;
+    public float horizontalAcceleration = 0.1f;
+    float horizontalVelocity;
+    public float playareaWidth = 14f;
+
+    [Header("Laser Settings")]
+    public GameObject laserPrefab;
+    public float laserSpeed = 40f;
+    public float weaponCooldownTime = 0.1f;
+    float weapoonLastFireTime;
+
     Transform player;
     Transform playerModel;
     Animator animator;
 
-    public float forwardSpeed = 20f;
-    public float horizontalAcceleration = 0.05f;
-    float horizontalSpeed;
-    public float playareaWidth = 7f;
-
-	void Start ()
+    void Start ()
     {
         player = transform.GetChild(0);
         playerModel = player.GetChild(0);
@@ -23,28 +31,37 @@ public class Flight : MonoBehaviour {
 	void Update ()
     {
         Move();
+
+        if (Input.GetButton("Fire") && Time.time - weapoonLastFireTime > weaponCooldownTime)
+        {
+            GameObject laser = Instantiate(laserPrefab, playerModel.transform.position, playerModel.transform.rotation);
+            laser.GetComponent<Laser>().laserSpeed = laserSpeed;
+            laser.transform.Rotate(Vector3.right * 90);
+            Destroy(laser, 10f);
+            weapoonLastFireTime = Time.time;
+        }
 	}
 
     void Move ()
     {    
         if (Input.GetAxisRaw("Horizontal") == 1 && player.position.x < playareaWidth)
         {
-            horizontalSpeed = Mathf.Lerp(horizontalSpeed, forwardSpeed, horizontalAcceleration);
+            horizontalVelocity = Mathf.Lerp(horizontalVelocity, horizontaSpeed, horizontalAcceleration);
             animator.SetBool("Right", true);
             animator.SetBool("Left", false);
         }
         else if (Input.GetAxisRaw("Horizontal") == -1 && player.position.x > -playareaWidth)
         {
-            horizontalSpeed = Mathf.Lerp(horizontalSpeed, -forwardSpeed, horizontalAcceleration);
+            horizontalVelocity = Mathf.Lerp(horizontalVelocity, -horizontaSpeed, horizontalAcceleration);
             animator.SetBool("Left", true);
             animator.SetBool("Right", false);
         } else
         {
-            horizontalSpeed = Mathf.Lerp(horizontalSpeed, 0, horizontalAcceleration);
+            horizontalVelocity = Mathf.Lerp(horizontalVelocity, 0, horizontalAcceleration);
             animator.SetBool("Right", false);
             animator.SetBool("Left", false);
         }
 
-        transform.Translate(new Vector3(horizontalSpeed * Time.deltaTime, 0, forwardSpeed * Time.deltaTime));
+        transform.Translate(new Vector3(horizontalVelocity * Time.deltaTime, 0, forwardSpeed * Time.deltaTime));
     }
 }

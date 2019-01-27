@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour {
 
+    [HideInInspector]
     public float laserSpeed;
 
 	void Update () {
